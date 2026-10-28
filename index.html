@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f1e8" />
+    <title>MeterMouseGarden</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="mouse-mark" aria-hidden="true">🐭</div>
+          <div><strong>MeterMouse</strong><span>Garden</span></div>
+        </div>
+        <p class="sidebar-note">A tiny field mouse keeping your AI garden healthy.</p>
+        <nav aria-label="Primary navigation">
+          <button class="nav-item active" data-view="garden"><span>🌿</span> Garden</button>
+          <button class="nav-item" data-view="usage"><span>💧</span> Usage</button>
+          <button class="nav-item" data-view="agents"><span>🪴</span> Agents</button>
+          <button class="nav-item" data-view="providers"><span>🧺</span> Providers</button>
+          <button class="nav-item" data-view="missions"><span>📋</span> Field work</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="fence-card"><span class="status-dot"></span><div><b>Private fence on</b><small>No prompt bodies stored</small></div></div>
+          <button class="quiet-button" data-toast="The local-first setup guide is ready to follow.">⚙ Settings</button>
+        </div>
+      </aside>
+
+      <section class="content">
+        <header class="topbar">
+          <div><span class="eyebrow">FIELD DAY 12</span><h1 id="page-title">Your garden is growing</h1></div>
+          <div class="top-actions"><button class="icon-button" data-toast="No new field notes.">🔔 <span class="notification-dot"></span></button><button class="avatar">MM</button></div>
+        </header>
+
+        <div id="view-garden" class="view active-view">
+          <section class="hero-grid">
+            <div class="mouse-card">
+              <div class="mouse-illustration" aria-hidden="true">🐭</div>
+              <div><span class="eyebrow">FIELD NOTE 0042</span><h2>Meter Mouse made the rounds.</h2><p>42 recent requests checked. 39 have observed usage. 3 are still in the fog.</p><button class="primary" data-view-target="usage">Inspect the clipboard →</button></div>
+            </div>
+            <div class="health-card"><div class="card-heading"><span>Garden health</span><b>76</b></div><div class="health-ring"><div><strong>Good</strong><small>with room to grow</small></div></div><div class="health-legend"><span><i class="green"></i> Visibility 82</span><span><i class="amber"></i> Efficiency 68</span><span><i class="blue"></i> Privacy 94</span></div></div>
+          </section>
+          <section class="section-heading"><div><span class="eyebrow">YOUR AI ECOSYSTEM</span><h2>Plants, paths, and field notes</h2></div><button class="text-button" data-toast="The planting guide will be available in the next build.">+ Plant an agent</button></section>
+          <section class="garden-grid">
+            <article class="plant-card healthy"><div class="plant-top"><span class="plant-icon">🌳</span><span class="pill good">Healthy</span></div><h3>OpenAI</h3><p>Primary coding path</p><div class="meter"><span style="width: 78%"></span></div><footer><span>342 requests</span><span>Observed</span></footer></article>
+            <article class="plant-card local"><div class="plant-top"><span class="plant-icon">🌱</span><span class="pill local-pill">Local</span></div><h3>Ollama</h3><p>Native plant, ready to grow</p><div class="meter"><span style="width: 42%"></span></div><footer><span>118 requests</span><span>Private</span></footer></article>
+            <article class="plant-card foggy"><div class="plant-top"><span class="plant-icon">🌫️</span><span class="pill fog-pill">Foggy</span></div><h3>Anthropic</h3><p>Limit evidence is missing</p><div class="meter"><span style="width: 24%"></span></div><footer><span>86 requests</span><span>Reported</span></footer></article>
+          </section>
+          <section class="care-card"><div class="care-mouse">🐭</div><div class="care-copy"><span class="eyebrow">NEXT CARE TASK · 4 MINUTES</span><h2>Grow a fallback for the summarizer</h2><p>Your summarizer has one provider path. A local fallback would make this workflow more resilient.</p></div><button class="primary" data-toast="Care task started. The next step is to choose a local model.">Start care task</button></section>
+        </div>
+
+        <div id="view-usage" class="view"><div class="page-intro"><span class="eyebrow">GROWTH JOURNAL</span><h2>What your AI is using</h2><p>Observed facts, reported values, and estimates stay visibly separate.</p></div><section class="metric-grid"><div class="metric"><small>Requests today</small><strong>546</strong><span class="up">↑ 12% vs yesterday</span></div><div class="metric"><small>Tokens today</small><strong>68,420</strong><span class="neutral">39,100 observed</span></div><div class="metric"><small>Estimated cost</small><strong>$4.82</strong><span class="down">↓ 9% after pruning</span></div><div class="metric"><small>Unknown values</small><strong>3</strong><span class="warn">Needs a field check</span></div></section><section class="chart-card"><div class="card-heading"><div><span class="eyebrow">SEVEN DAY FLOW</span><h3>Usage by day</h3></div><span class="legend-label"><i class="chart-dot"></i> requests</span></div><div class="bar-chart"><span style="height: 34%"><b>Mon</b></span><span style="height: 54%"><b>Tue</b></span><span style="height: 44%"><b>Wed</b></span><span style="height: 72%"><b>Thu</b></span><span style="height: 61%"><b>Fri</b></span><span style="height: 86%"><b>Sat</b></span><span class="today" style="height: 68%"><b>Today</b></span></div></section></div>
+
+        <div id="view-agents" class="view"><div class="page-intro"><span class="eyebrow">GARDEN RESIDENTS</span><h2>Your agents</h2><p>Each agent gets a health check, a route, and a field history.</p></div><section class="table-card"><div class="table-row table-head"><span>Agent</span><span>Primary path</span><span>Health</span><span>Last checked</span></div><div class="table-row"><span>🧰 Coding assistant</span><span>OpenAI → Ollama</span><span class="good-text">Healthy</span><span>2 min ago</span></div><div class="table-row"><span>🔎 Research scout</span><span>Anthropic</span><span class="warn-text">Foggy limit</span><span>18 min ago</span></div><div class="table-row"><span>✍️ Writing helper</span><span>Ollama</span><span class="good-text">Private</span><span>1 hr ago</span></div></section></div>
+
+        <div id="view-providers" class="view"><div class="page-intro"><span class="eyebrow">SEED LIBRARY</span><h2>Provider beds</h2><p>Connect, compare, and understand what each provider can actually reveal.</p></div><section class="provider-list"><div class="provider-row"><span class="provider-logo openai-logo">O</span><div><h3>OpenAI</h3><p>Usage observed · limits partially unknown</p></div><span class="pill good">Connected</span><button class="small-button" data-toast="OpenAI details selected.">Inspect</button></div><div class="provider-row"><span class="provider-logo ollama-logo">O</span><div><h3>Ollama</h3><p>Local · private · 4 models available</p></div><span class="pill local-pill">Local</span><button class="small-button" data-toast="Ollama details selected.">Inspect</button></div><div class="provider-row"><span class="provider-logo anthropic-logo">A</span><div><h3>Anthropic</h3><p>Reported usage · account limit not verified</p></div><span class="pill fog-pill">Needs care</span><button class="small-button" data-toast="Anthropic details selected.">Inspect</button></div></section></div>
+
+        <div id="view-missions" class="view"><div class="page-intro"><span class="eyebrow">FIELD WORK</span><h2>Care tasks</h2><p>Small, useful missions that leave your AI system healthier than you found it.</p></div><section class="mission-grid"><article class="mission-card featured"><span class="mission-number">01</span><h3>Clear the morning fog</h3><p>Replace one estimated usage value with an observed field note.</p><footer><span>+8 visibility</span><button class="primary" data-toast="Mission started: Clear the morning fog.">Start</button></footer></article><article class="mission-card"><span class="mission-number">02</span><h3>Grow a fallback</h3><p>Give your coding assistant a tested local route.</p><footer><span>+12 resilience</span><button class="small-button" data-toast="Mission queued.">Queue</button></footer></article><article class="mission-card"><span class="mission-number">03</span><h3>Prune the context</h3><p>Find repeated context and reduce unnecessary water usage.</p><footer><span>+10 efficiency</span><button class="small-button" data-toast="Mission queued.">Queue</button></footer></article></section></div>
+      </section>
+    </main>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
